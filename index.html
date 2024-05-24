@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Lap Counter</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Setup</a></li>
+            <li><a href="#">Track</a></li>
+            <li><a href="#">Summary</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Page -->
+    <section id="landing-page">
+        <h2>Welcome to Lap Counter</h2>
+        <p>Track your laps with ease using our GPS-enabled lap counter.</p>
+        <button id="get-started">Get Started</button>
+    </section>
+
+    <!-- Setup Page -->
+    <section id="setup-page" class="hidden">
+        <h2>Setup Your Lap Counter</h2>
+        <form id="setup-form">
+            <label for="lap-distance">Enter Lap Distance (meters):</label>
+            <input type="number" id="lap-distance" required>
+            <button type="button" id="enable-gps">Enable GPS</button>
+            <button type="button" id="start-tracking">Start</button>
+        </form>
+    </section>
+
+    <!-- Tracking Page -->
+    <section id="tracking-page" class="hidden">
+        <h2>Tracking Your Run</h2>
+        <div id="map"></div>
+        <p>Current Position: <span id="current-position">0, 0</span></p>
+        <div class="tracking-info">
+            <div class="info">
+                <span>Laps Completed</span>
+                <span id="lap-count">0</span>
+            </div>
+            <div class="info">
+                <span>Distance Covered</span>
+                <span id="distance-covered">0</span> meters
+            </div>
+            <div class="info">
+                <span>Time</span>
+                <span id="timer">00:00:00</span>
+            </div>
+        </div>
+        <button id="stop-tracking">Stop</button>
+    </section>
+
+    <!-- Session Summary Page -->
+    <section id="summary-page" class="hidden">
+        <h2>Run Summary</h2>
+        <div class="summary-info">
+            <div class="info">
+                <span>Total Laps</span>
+                <span id="total-laps">0</span>
+            </div>
+            <div class="info">
+                <span>Total Distance</span>
+                <span id="total-distance">0</span> meters
+            </div>
+            <div class="info">
+                <span>Total Time</span>
+                <span id="total-time">00:00:00</span>
+            </div>
+        </div>
+        <button id="save-session">Save Session</button>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Ecosystem bootstrapping learning curve lean startup disruptive. Marketing long tail disruptive agile development partner.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-links">
+                <div class="link-box">
+                    <i class="fas fa-globe"></i>
+                    <span>dribbble.com/example</span>
+                </div>
+                <div class="link-box">
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@example.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</body>
+</html>
